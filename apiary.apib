@@ -1,0 +1,48 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# tictacgo
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Matches Collection [/matches]
+
+### List All Matches [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "shortname": "james-vs-joe"
+            }
+        ]
+
+### Create a New Matches [POST]
+
++ Request (application/json)
+
+        {
+            "shortname": "adam-vs-nils"
+        }
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /matches/adam-vs-nils
+
+    + Body
+
+            {
+                "shortname": "adam-vs-nils",
+            }
+
+## Match Information [/matches/{shortname}]
+
+### View Match Information [GET /matches/james-vs-joe]
+
++ Response 200 (application/json)
+
+        {
+           "shortname": "james-vs-joe"
+        }
