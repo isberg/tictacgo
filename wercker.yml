@@ -57,6 +57,14 @@ build:
         code: |
           cp -R ./ ${WERCKER_OUTPUT_DIR}
 
+dredd:
+  steps:
+    - script:
+        name: debug
+        code: |
+          whoami
+          pwd
+          ls
 
 deploy:
  steps:
