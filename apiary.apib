@@ -9,7 +9,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
 
 ### List All Matches [GET]
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=UTF-8)
 
         [
             {
@@ -25,7 +25,7 @@ Polls is a simple API allowing consumers to view polls and vote in them.
             "shortname": "adam-vs-nils"
         }
 
-+ Response 201 (application/json)
++ Response 201 (application/json; charset=UTF-8)
 
     + Headers
 
@@ -34,14 +34,14 @@ Polls is a simple API allowing consumers to view polls and vote in them.
     + Body
 
             {
-                "shortname": "adam-vs-nils",
+                "shortname": "adam-vs-nils"
             }
 
 ## Match Information [/matches/{shortname}]
 
 ### View Match Information [GET /matches/james-vs-joe]
 
-+ Response 200 (application/json)
++ Response 200 (application/json; charset=UTF-8)
 
         {
            "shortname": "james-vs-joe"

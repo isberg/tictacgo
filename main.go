@@ -1,5 +1,17 @@
 package main
 
+import (
+	"os"
+
+	"github.com/isberg/tictacgo/service"
+)
+
 func main() {
-	println("Nothing to see, please move along.")
+	port := os.Getenv("PORT")
+	if len(port) == 0 {
+		port = "3000"
+	}
+
+	server := service.NewServer()
+	server.Run(":" + port)
 }
