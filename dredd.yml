@@ -6,7 +6,7 @@ dry-run: null
 hookfiles: null
 language: go
 sandbox: false
-server: go run main.go
+server: ./app
 server-wait: 3
 init: false
 names: false
