@@ -58,7 +58,7 @@ build:
           cp -R ./ ${WERCKER_OUTPUT_DIR}
 
 dredd:
-  box: node:alpine
+  box: node
   steps:
     - script:
         name: debug
@@ -66,6 +66,9 @@ dredd:
           whoami
           pwd
           ls
+          npm install -g dredd
+          dredd init -r apiary -j apiaryApiKey:907ca027ce26742595ce46458f41e857 -j apiaryApiName:tictacgo
+          dredd
 
 deploy:
  steps:
