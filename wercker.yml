@@ -61,12 +61,9 @@ dredd:
   box: node
   steps:
     - script:
-        name: debug
+        name: dredd
         code: |
-          whoami
-          pwd
-          ls
-          npm install -g dredd
+          npm install -g dredd --no-optional
           dredd init -r apiary -j apiaryApiKey:907ca027ce26742595ce46458f41e857 -j apiaryApiName:tictacgo
           dredd
 
